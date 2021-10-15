@@ -33,7 +33,7 @@ public class Price {
     public BigDecimal getPrice() {
         return price;
     }
-    public BigDecimal getPrice() {
+    public BigDecimal getPrice( BigDecimal entity) {
         return price;
     }
 

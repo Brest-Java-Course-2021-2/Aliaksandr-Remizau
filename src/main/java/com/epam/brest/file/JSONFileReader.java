@@ -31,5 +31,5 @@ public class JSONFileReader implements FileReader{
             }
         }
         return Price;
-    }
+    }*/
 }
