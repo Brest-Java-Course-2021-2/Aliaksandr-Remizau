@@ -1,6 +1,7 @@
 package com.epam.brest;
 import com.epam.brest.calc.CalcImpl;
 import com.epam.brest.file.JSONFileReader;
+import com.epam.brest.price.Price;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -16,9 +17,10 @@ public class Main {
         BigDecimal weight;
         BigDecimal length;
 
-        //new JSONFile
-        //add file to resources
+        //fix JSONFile
         //fix method main
+        //Price
+
 
         try (Scanner scanner = new Scanner(System.in)) {
             do {

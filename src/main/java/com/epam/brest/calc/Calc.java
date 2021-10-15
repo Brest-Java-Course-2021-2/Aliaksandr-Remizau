@@ -6,6 +6,6 @@ import java.math.BigDecimal;
 
 public interface Calc {
         default BigDecimal handle(BigDecimal weight,  BigDecimal length){
-        return weight.multiply(new Price().choosePrise(weight)).add(length.multiply(new Price().choosePrise(length)));
+        return weight.multiply(BigDecimal.valueOf(1)).add(length.multiply(BigDecimal.valueOf(1)));
     }
 }
