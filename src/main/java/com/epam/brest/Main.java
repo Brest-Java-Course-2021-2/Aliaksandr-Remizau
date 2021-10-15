@@ -1,15 +1,21 @@
 package com.epam.brest;
 import com.epam.brest.calc.CalcImpl;
+import com.epam.brest.file.JSONFileReader;
+
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    private static final String WEIGHT_PRICE ="weight_price.json";
+    private static final String LENGTH_PRICE ="length_price.json";
+
+    public static void main(String[] args) throws IOException {
+
         BigDecimal weight;
-        BigDecimal pricePerKg;
         BigDecimal length;
-        BigDecimal pricePerKm;
+
         //new JSONFile
         //add file to resources
         //fix method main
@@ -17,10 +23,9 @@ public class Main {
         try (Scanner scanner = new Scanner(System.in)) {
             do {
                 weight = getValueFromConsole(scanner, "Enter weight:");
-                pricePerKg = getValueFromConsole(scanner, "Enter pricePerKg:");
                 length = getValueFromConsole(scanner, "Enter length(km):");
-                pricePerKm = getValueFromConsole(scanner, "Enter pricePerKm:");
-                System.out.println("Result = " + new CalcImpl().handle(weight,pricePerKg,length,pricePerKm));
+
+                System.out.println("Result = " + new CalcImpl().handle(weight,length));
                 scanner.nextLine();
                 if( "q".equalsIgnoreCase(userConsoleChoose(scanner))){
                     break;

@@ -11,7 +11,6 @@ public class JSONFileReader implements FileReader{
     @Override
     public Map<Integer, BigDecimal> readFileFromResources(String fileName) throws IOException {
         Map<Integer,BigDecimal> resultMap = new TreeMap<>();
-
         InputStream inputStream = getClass().getResourceAsStream("/" + fileName);
         try(InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
