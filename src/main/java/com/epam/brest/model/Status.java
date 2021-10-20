@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public interface Status {
-    List<String> messages = new ArrayList<>(Arrays.asList("please enter weight"))
-    List<BigDecimal> userDate = new ArrayList<>();
+    List<String> messages = new ArrayList<>(Arrays.asList("Please enter weight:","Please enter distance:"));
+    List<BigDecimal> userData = new ArrayList<>();
 
     Status handle();
 

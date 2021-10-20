@@ -7,5 +7,5 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 public interface FileReader {
- Map<BigDecimal,BigDecimal> readFileFromResources(String fileName) throws IOException;
+ Map<Integer,BigDecimal> readFileFromResources(String filePath) throws IOException;
 }
