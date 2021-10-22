@@ -1,5 +1,6 @@
 package com.epam.brest;
 import com.epam.brest.file.CSVFileReader;
+import com.epam.brest.file.JSONFileReader;
 import com.epam.brest.model.ReadDataState;
 import com.epam.brest.model.Status;
 import com.epam.brest.model.StatusType;
@@ -12,13 +13,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] arg) throws IOException {
+         Map<Integer,BigDecimal> pricePerKmMap = new JSONFileReader().readFileFromResources("weight_price.json");
+         Map<Integer,BigDecimal> pricePerKgMap = new JSONFileReader().readFileFromResources("distance_price.json");
 
-        /*String f1 = "weight_price.csv";
-        if(arg.length >0 && arg[0].length()>0){
-            f1 = arg[0];
-        }*/
-        Map<Integer,BigDecimal> pricePerKmMap = new CSVFileReader().readFileFromResources("weight_price.csv");
-        Map<Integer,BigDecimal> pricePerKgMap = new CSVFileReader().readFileFromResources("distance_price.csv");
+       // Map<Integer,BigDecimal> pricePerKmMap = new CSVFileReader().readFileFromResources("weight_price.csv");
+        // Map<Integer,BigDecimal> pricePerKgMap = new CSVFileReader().readFileFromResources("distance_price.csv");
 
         try (Scanner scanner = new Scanner(System.in)) {
             Status currentStatus = new ReadDataState(scanner,pricePerKgMap,pricePerKmMap);

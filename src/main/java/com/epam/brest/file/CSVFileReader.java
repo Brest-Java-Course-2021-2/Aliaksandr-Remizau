@@ -26,5 +26,4 @@ public class CSVFileReader implements FileReader{
         }
         return resultMap;
     }
-
 }
