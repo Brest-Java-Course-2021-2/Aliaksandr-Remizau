@@ -1,6 +1,5 @@
 package com.epam.brest;
 import com.epam.brest.file.FileReader;
-import com.epam.brest.file.JSONFileReader;
 import com.epam.brest.model.ReadDataState;
 import com.epam.brest.model.Status;
 import com.epam.brest.model.StatusType;
